@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app="materialDrive">
+  <head>
+    <!--<base href="/">-->
+    <title>Material Drive</title>
+    <link rel="sourtcut icon" type="image/x-icon" href="favicon.ico">
+
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1;IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Material Drive : google drive with angular material">
+
+    <!-- build:css(./) css/style.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/github-fork-ribbon-css/gh-fork-ribbon.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/materialdrive.css">
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body layout="row">
+    <div layout="row" layout-fill tabindex="-1" role="main">
+      <div ui-view layout="column" flex></div>
+    </div>
+
+    
+
+    <!-- build:libjs(./) js/lib.js -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-touch/angular-touch.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
+    <script type='text/javascript' src='bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js'></script>
+    <!-- endbuild -->
+
+    <!-- build:appjs(./) js/app.js -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/module.config.js"></script>
+
+    <script type="text/javascript" src="app/shared/mimeType.js"></script>
+    <script type="text/javascript" src="app/shared/baseService.js"></script>
+    <script type="text/javascript" src="app/shared/utilService.js"></script>
+    <script type="text/javascript" src="app/shared/googleService.js"></script>
+
+    <script type="text/javascript" src="app/common/contextMenuDirective.js"></script>
+    <script type="text/javascript" src="app/common/dropdownDirective.js"></script>
+    <script type="text/javascript" src="app/common/rightClickDirective.js"></script>
+    <script type="text/javascript" src="app/common/focusDirective.js"></script>
+
+    <script type="text/javascript" src="app/gate/gateController.js"></script>
+
+    <script type="text/javascript" src="app/drive/driveController.js"></script>
+    <script type="text/javascript" src="app/drive/navbarController.js"></script>
+    <script type="text/javascript" src="app/drive/sidenavController.js"></script>
+    <script type="text/javascript" src="app/drive/newItemFabController.js"></script>
+    <script type="text/javascript" src="app/drive/detailsDirective.js"></script>
+
+    <script type="text/javascript" src="app/dialog/nameDialogController.js"></script>
+    <script type="text/javascript" src="app/dialog/navigationDialogController.js"></script>
+    <script type="text/javascript" src="app/dialog/uploadProgressDialogController.js"></script>
+    <!-- endbuild -->
+
+    <!-- app.tpls.js -->
+
+    <script type="text/javascript" src="https://apis.google.com/js/client.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-56399707-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+
+
+  </body>
+</html>
